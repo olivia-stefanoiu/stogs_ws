@@ -1,0 +1,15 @@
+{
+    "Version": 2,
+    "Comments": "This shows how to import all detectors of all factories - including MyFactory - into a workspace",
+    "setup" : {},
+    "physics": ["general0","emstandard_opt3"],
+    "generator": {},
+    "actions": {},
+    "Import": {
+        "check_overlaps" : false,
+        "verbose_level" : 0,
+        "stogs_factory": ["DetectorFactory/SemiConductors/Ge/","DetectorFactory/Scintillators/","DetectorFactory/MyFactory/","DetectorFactory/Arrays/","DetectorFactory/Generics/"]
+    },
+    "Source": {},
+    "Builder": {}
+}

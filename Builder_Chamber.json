@@ -1,0 +1,23 @@
+{
+    "Version": 2,
+    "Comments": "Aluminium reaction chamber: tube along z, inner radius 43.5 mm, outer radius 46.5 mm, length 2 m, centred on the target, passive",
+    "setup" : {
+        "name": "DetectorFactory/Generics/Disks",
+        "opts": "",
+        "spec": {
+            "layers" :
+            [
+                {"name":"Chamber","matname":"Al","sd":"","rmin":43.5,"rmax":46.5,"phistart":0.0,"phidelta":360.0,"zdepth":1000.0,"zdepthunit":"mm","zoffset":0.0,"zoffsetunit":"mm"}
+            ]
+        }
+    },
+    "physics": ["general0","emstandard_opt3"],
+    "generator": {
+        "type" : "GPS",
+        "opts" : "G4Macros/GPS_Cs137.mac"
+    },
+    "actions": {
+    },
+    "Source": {
+    }
+}

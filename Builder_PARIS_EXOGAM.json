@@ -1,0 +1,56 @@
+{
+    "Version": 2,
+    "Comments": "8 PARIS clusters (paris.dat, front face at 25.75 cm), 8 EXOGAM clovers (front face at 13.5 cm), aluminium reaction chamber, vacuum world",
+    "Builder": {
+        "name": "PARIS_EXOGAM",
+        "opts": "",
+        "spec": {
+              "world" : {
+                  "name": "DetectorFactory/Rooms/VR",
+                  "spec": {
+                      "room" : {"mat":"G4_Galactic", "size": [2,2,2],"units": "m"}
+                  }
+                },
+            "@": 0,
+            "with": [
+                {
+                "@": 0,
+                "+":
+                    [
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 90 deg Rz 0 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 135 deg Rz 90 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 90 deg Rz 90 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 45 deg Rz 90 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 90 deg Rz 180 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 45 deg Rz 270 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 90 deg Rz 270 deg Rt",
+                        "DetectorFactory/Scintillators/CParisPW_2", "+00.000 +00.000 25.75 cm Ry 135 deg Rz 270 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 90 deg Rz -45 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 45 deg Rz 0 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 90 deg Rz 135 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 135 deg Rz 0 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 90 deg Rz -135 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 45 deg Rz 180 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 90 deg Rz 45 deg Rt",
+                        "DetectorFactory/SemiConductors/Ge/EXOCLOVER_A-AC-GANIL", "+00.000 +00.000 13.5 cm Ry 135 deg Rz 180 deg Rt",
+                        "DetectorFactory/MyFactory/ReactionChamber", "+00.000 +00.000 0. cm"
+                    ]
+                 }
+             ]
+        }
+    },
+    "setup" : {
+      "name": "",
+      "opts": "",
+      "spec": ""
+    },
+      "physics": ["general0","emstandard_opt3"],
+     "generator": {
+      "type" : "GPS",
+      "opts" : "G4Macros/GPS_Cs137.mac"
+     },
+    "actions": {
+    },
+    "Source": {
+    }
+}

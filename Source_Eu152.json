@@ -1,0 +1,30 @@
+{
+    "Version": 2,
+    "Comments": "152Eu source at rest at the target position, full radioactive decay, PARIS + EXOGAM setup",
+    "setup" : {
+      "name": "DetectorFactory/MyStore/PARIS_EXOGAM",
+      "opts": "",
+      "spec": {}
+    },
+    "physics": ["general0","emstandard_opt3","RDECAY"],
+    "generator": {
+      "type" : "GPS",
+      "opts" : "G4Macros/GPS_Eu152.mac"
+    },
+    "actions": {
+        "type" : "ttree",
+        "outpath": "/media/olivia/Partition1/stogs_ws/Output",
+        "basename": "Eu152",
+        "modulo": 1000000,
+        "maxfilesize": 10000000000,
+        "auto_save": 10000000,
+        "record_option": 0,
+        "outtree" : {
+            "name" : "SToGS",
+            "branches" : ["Ev.E","Ev.UID","Ev.X","Ev.Y","Ev.Z","Pr.E"]
+        }
+    },
+    "Source": {
+        "nbthread": 1
+    }
+}
